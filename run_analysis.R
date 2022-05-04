@@ -83,7 +83,7 @@ cleaned_data <- cbind(subject, y, X)
 
 cleaned_data <- data.table(cleaned_data)
 tidy_data <- cleaned_data[, lapply(.SD, mean), by = 'Subject,Activity']
-write.table(tidy_data, file = "Tidy.txt", row.names = FALSE)
+write.csv(tidy_data, file = "Tidy.csv", row.names = FALSE)
 
 
 
